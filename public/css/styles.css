@@ -1,0 +1,146 @@
+html, body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+a {
+    font-size: 1em;
+    color: #f0f0f0;
+    padding: 0 15px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;     
+}
+
+a:hover {
+    text-decoration: none;
+    color: #FFD448;
+}
+
+.darkMode {
+    background-color: #212121;
+    color: #fff;
+}
+
+.lightMode {
+    background-color: #fff;
+    color: #212121;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+.ui-menu {
+    z-index:10;
+}
+.arrow {
+    display: inline-block;
+    padding: 3px;
+  }
+.up {
+    border: solid green;
+    border-width: 0 3px 3px 0;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    margin-bottom: 2%;
+}
+.down {
+    border: solid red;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-bottom: 4%;
+}
+.playerContainer {
+    margin: 1%;
+    background-color: #303030;
+    text-align: center;
+    border-radius: 1%;
+    border: .2em solid #404040;
+}
+.priceContainer {
+    padding: 2%;
+}
+
+.colPop {
+    transition: all .2s ease-in-out; 
+    transform-origin:bottom right;
+    background-color: #292929;
+
+}
+.colPop:hover {
+    box-shadow: 2.5px 5px 0 -1px #FFD448;
+    transform: scale(1.02);
+}
+
+.owlLogoContainer {
+    text-align: center;
+    height: 10em;
+}
+.owlLogos {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.centerCenter {
+    text-align: center;
+    margin: auto;
+}
+.centerTop {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
+input[type="number"] {
+    background-color: rgb(118, 118, 118);
+    color: rgb(350, 350, 350);
+}
+input[type="text"]:focus, input[type="number"]:focus {
+    background-color: black;
+    color: #f1f1f1;
+}
+
+.modal-body {
+    background-color: #292929;
+}
+
+.flashBackgroundUpdated {
+    background-color: #004085;
+}
