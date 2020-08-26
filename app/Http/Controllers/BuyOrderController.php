@@ -8,7 +8,7 @@ use App\SellOrder;
 use App\PriceHistory;
 use App\Events\PriceHistoryCreated;
 use App\Events\BuyOrderCreated;
-use App\EVents\BuyOrderFilled;
+use App\Events\BuyOrderFilled;
 use App\Position;
 
 use Illuminate\Http\Request;
