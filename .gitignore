@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/config/broadcasting.php
 .env
 .env.backup
 .phpunit.result.cache
