@@ -30,6 +30,7 @@ channel.listen('PriceHistoryCreated', function(data) {
     }
 });
 channel.listen('BuyOrderCreated', function(data) {
+  console.log(data);
   if (data.player_id == {{$player->id}})
   {
     var buyOrderList = document.getElementById('buyOrderList');
@@ -46,6 +47,7 @@ channel.listen('BuyOrderCreated', function(data) {
   }
 });
 channel.listen('SellOrderCreated', function(data) {
+  console.log(data);
   if (data.player_id == {{$player->id}})
   {
     var sellOrderList = document.getElementById('sellOrderList');
