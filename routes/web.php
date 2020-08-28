@@ -141,6 +141,9 @@ use Illuminate\Support\Facades\Auth;
     */
     //return view('welcome');
 
+Route::get('/logout', 'Auth\LoginController@logout');
+
+
 Route::get('/', function () {
     return redirect('overwatch/');
 });

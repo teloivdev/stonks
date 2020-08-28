@@ -28042,6 +28042,7 @@ if (userId != null) {
   var channel = window.Echo.channel('price');
   channel.listen('BuyOrderFilled', function (data) {
     var now = new Date().toLocaleTimeString();
+    console.log(data);
 
     if (data.buyOrder.user_id == userId) {
       var toastContainer = $('#orderFillNotifierContainer');
