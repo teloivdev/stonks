@@ -37,8 +37,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     app_id: '1058252',
     wsHost: window.location.hostname,
     wsPort: 6001,
-    wssPort: 443,
-    forceTLS: false,
-    encryption: false,
+    wssPort: 6001,
     disableStats: true,
 });
