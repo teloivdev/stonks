@@ -30,15 +30,20 @@ channel.listen('PriceHistoryCreated', function(data) {
     }
 });
 channel.listen('BuyOrderCreated', function(data) {
-  console.log(data);
-  if (data.player_id == {{$player->id}})
+  if (data.buyOrders[0].player_id == {{$player->id}})
   {
     var buyOrderList = document.getElementById('buyOrderList');
-    var buyOrderTable = document.getElementById('buyOrderTable');
+    var buyOrderTable = document.getElementById('buyOrderRows');
     var html = '';
     data.buyOrders.forEach(function(bo) {
+      var date = new Date(bo.created_at);  // 2009-11-10
+      var month = date.toLocaleString('default', { month: 'long' });
+      var day = date.getDate();
+      var year = date.getFullYear();
+      var formattedDate = day + ', ' + month + ', ' + year;
       //html += '<p class="centerCenter">$' + bo.price + ' Amount: ' + bo.available_amount + '</p>';
-      html += '<tr style="color: white;"><td>$' + data.price + '</td><td>' + data.available_amount + '</td></tr>';
+      html += '<tr style="color: white;"><td>' + bo.price + '</td><td>' + bo.available_amount + '</td><td>' + 
+      formattedDate + '</td></tr>';
     });
 
     buyOrderTable.innerHTML = html;
@@ -47,15 +52,14 @@ channel.listen('BuyOrderCreated', function(data) {
   }
 });
 channel.listen('SellOrderCreated', function(data) {
-  console.log(data);
-  if (data.player_id == {{$player->id}})
+  if (data.sellOrders[0].player_id == {{$player->id}})
   {
     var sellOrderList = document.getElementById('sellOrderList');
-    var sellOrderTable = document.getElementById('sellOrderTable');
+    var sellOrderTable = document.getElementById('sellOrderRows');
 
     var html = '';
     data.sellOrders.forEach(function(so) {
-      html += '<tr style="color: white;"><td>$' + data.price + '</td><td>' + data.available_amount + '</td></tr>';
+      html += '<tr style="color: white;"><td>$' + so.price + '</td><td>' + so.available_amount + '</td></tr>';
     });
 
     sellOrderTable.innerHTML = html;

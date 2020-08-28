@@ -38,13 +38,15 @@
                                 <th scope="col">Created Date</th>
                             </tr>
                         </thead>
+                        <tbody id="buyOrderRows">
                         @foreach ($buyOrders as $bo)
                         <tr style="color: white;">
                             <td>{{$bo->price}}</td>
                             <td>{{$bo->amount}}</td>
-                            <td>{{ \Carbon\Carbon::parse($bo->created_at)->format('j, F, Y')}}</td>
+                            <td>{{ \Carbon\Carbon::parse($bo->created_at)->subDays(1)->format('j, F, Y')}}</td>
                         </tr>
                         @endforeach
+                        </tbody>
                     </table>       
                 </div> 
             </div>
@@ -61,13 +63,15 @@
                                 <th scope="col">Created Date</th>
                             </tr>
                         </thead>
+                        <tbody id="sellOrderRows">
                         @foreach ($sellOrders as $so)
                         <tr style="color: white;">
                             <td>{{$so->price}}</td>
                             <td>{{$so->amount}}</td>
-                            <td>{{ \Carbon\Carbon::parse($so->created_at)->format('j, F, Y')}}</td>
+                            <td>{{ \Carbon\Carbon::parse($so->created_at)->subDays(1)->format('j, F, Y')}}</td>
                         </tr>
                         @endforeach
+                        </tbody>
                     </table>   
                 </div> 
             </div>

@@ -57,7 +57,6 @@ class PlayerController extends Controller
         $ph = PriceHistory::where('player_id', $player->id)->latest()->first();
         //$sellOrders = SellOrder::where('player_id', $player->id)->where('filled', '0')->orderBy('price', 'desc')->skip(0)->take(10)->get();
         $sellOrders = SellOrder::where('player_id', $player->id)->where('filled', '0')->orderBy('price', 'desc')->paginate(25);
-
         $buyOrders = BuyOrder::where('player_id', $player->id)->where('filled', '0')->orderBy('price', 'desc')->skip(0)->take(10)->get();
         $player->last_price = $ph != null ? $ph->price : 1;
 
